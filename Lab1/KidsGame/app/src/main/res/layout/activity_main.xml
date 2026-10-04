@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess the number between 1 and 30" />
+
+    <EditText
+        android:id="@+id/editGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitle"
+        android:hint="Your guess"
+        android:inputType="number"
+        android:maxLength="2" />
+
+    <Button
+        android:id="@+id/buttonGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editGuess"
+        android:onClick="onGuessClick"
+        android:text="Guess" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonGuess" />
+
+    <TextView
+        android:id="@+id/textGuesses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textResult"
+        android:text="Number of guesses: 0" />
+
+    <Button
+        android:id="@+id/buttonPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textGuesses"
+        android:onClick="onPlayAgainClick"
+        android:text="Play Again"
+        android:visibility="gone" />
+
+</RelativeLayout>
