@@ -5,39 +5,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editName"
+    <TextView
+        android:id="@+id/textMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        android:inputType="textPersonName" />
+        android:padding="16dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="A validation code has been emailed to you. Enter it below." />
 
     <EditText
-        android:id="@+id/editPassword"
+        android:id="@+id/editCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/editPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telephone Number"
-        android:inputType="phone" />
-
-    <EditText
-        android:id="@+id/editEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress" />
+        android:hint="Validation Code"
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/buttonSubmit"
+        android:id="@+id/buttonValidate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onSubmitClick"
-        android:text="Submit" />
+        android:onClick="onValidateClick"
+        android:text="Validate" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="18sp" />
 
 </LinearLayout>

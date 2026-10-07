@@ -1,12 +1,18 @@
 package com.example.question2;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +26,82 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void onSubmitClick(View view) {
+        EditText editName = findViewById(R.id.editName);
+        EditText editPassword = findViewById(R.id.editPassword);
+        EditText editPhone = findViewById(R.id.editPhone);
+        EditText editEmail = findViewById(R.id.editEmail);
+
+        String name = editName.getText().toString().trim();
+        String password = editPassword.getText().toString();
+        String phone = editPhone.getText().toString().trim();
+        String email = editEmail.getText().toString().trim();
+
+        boolean valid = true;
+
+        boolean nameHasDigit = false;
+        for (int i = 0; i < name.length(); i++) {
+            if (Character.isDigit(name.charAt(i))) {
+                nameHasDigit = true;
+            }
+        }
+        if (name.isEmpty()) {
+            editName.setError("Please enter your name");
+            valid = false;
+        } else if (nameHasDigit) {
+            editName.setError("Name cannot contain numbers");
+            valid = false;
+        }
+
+        if (password.length() < 6) {
+            editPassword.setError("Password must be at least 6 characters");
+            valid = false;
+        }
+
+        boolean phoneHasLetter = false;
+        for (int i = 0; i < phone.length(); i++) {
+            if (!Character.isDigit(phone.charAt(i))) {
+                phoneHasLetter = true;
+            }
+        }
+        if (phone.isEmpty()) {
+            editPhone.setError("Please enter your phone number");
+            valid = false;
+        } else if (phoneHasLetter) {
+            editPhone.setError("Phone number can only contain digits");
+            valid = false;
+        }
+
+        if (!email.contains("@") || !email.contains(".")) {
+            editEmail.setError("Please enter a valid email address");
+            valid = false;
+        }
+
+        if (valid) {
+            Random random = new Random();
+            String code = "";
+            for (int i = 0; i < 6; i++) {
+                code = code + random.nextInt(10);
+            }
+
+            Intent codeIntent = new Intent(this, MainActivity2.class);
+            codeIntent.putExtra("name", name);
+            codeIntent.putExtra("code", code);
+            startActivity(codeIntent);
+
+            composeEmail(new String[]{email}, "Your validation code is: " + code);
+        }
+    }
+
+    public void composeEmail(String[] addresses, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // Only email apps handle this.
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
