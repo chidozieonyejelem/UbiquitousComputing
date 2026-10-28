@@ -1,0 +1,59 @@
+commit a882de09eb0343bceeea7839ac3f9aa55a0e5e37
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Wed Oct 28 22:57:34 2026 +0000
+
+    Lab 3: Don't Touch My Phone
+
+commit d0d0e947fceeb137a225d92dea1dad24c8c1ac19
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Wed Oct 7 22:05:53 2026 +0100
+
+    completed q1
+
+commit 3e735fc0058c7f8a5f00c5c05ab4bb11f3f45aee
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Wed Oct 7 22:05:22 2026 +0100
+
+    completed q2
+
+commit 52c2a6e009358a08e5c8c567874adffaa8f21238
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Wed Oct 7 19:13:55 2026 +0100
+
+    added question 2
+
+commit 75a50b23c73722fd08e1ad94b347654f8c74313d
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Wed Oct 7 19:08:40 2026 +0100
+
+    added lab2 structure
+
+commit 1d94d33ff6c36d6b22bcdc834b5cb649c7c6409e
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Sun Oct 4 13:50:35 2026 +0100
+
+    game
+
+commit ae740db3fbd351b13459d04d2926392f3345ce22
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Sun Oct 4 13:50:00 2026 +0100
+
+    form
+
+commit f2edb2e287ea5cb2b1e2740c00cb949292713378
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Sun Oct 4 02:32:10 2026 +0100
+
+    fixed structure again
+
+commit 12aee4d25896265c41741895eca352955dd288d2
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Sun Oct 4 02:26:23 2026 +0100
+
+    click counter
+
+commit 8db9f3e33fcb9b80cb0ea7dbf54d88c2500c46aa
+Author: Doz1E <chidozieonyejelem1@gmail.com>
+Date:   Sun Oct 4 01:57:07 2026 +0100
+
+    fixed structure
