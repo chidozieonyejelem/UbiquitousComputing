@@ -1,0 +1,29 @@
+{
+  "recipes": [
+    {
+      "name": "Pizza",
+      "ingredients": ["Flour", "Tomato Sauce", "Mozzarella Cheese", "Pepperoni"],
+      "method": ["Make pizza base using flour.", "Spread tomato sauce across base.", "Put a layer of cheese.", "Place pepperoni on top of cheese.", "Cook in oven."]
+    },
+    {
+      "name": "Fried Chicken",
+      "ingredients": ["Chicken", "Flour", "Eggs", "Salt", "Oil"],
+      "method": ["Mix eggs in a bowl.", "Mix flour and salt in another bowl.", "Dip chicken in egg then coat in flour.", "Heat oil in a pan.", "Fry chicken until cooked."]
+    },
+    {
+      "name": "Pasta",
+      "ingredients": ["Pasta", "Tomato Sauce"],
+      "method": ["Boil water in a pot.", "Add pasta and cook until soft.", "Drain the water.", "Mix in tomato sauce."]
+    },
+    {
+      "name": "Scrambled Egg",
+      "ingredients": ["Eggs", "Salt"],
+      "method": ["Crack eggs into a bowl.", "Add salt then mix.", "Fry and stir until cooked."]
+    },
+    {
+      "name": "Cookies",
+      "ingredients": ["Flour", "Butter", "Sugar", "Egg", "Chocolate Chips"],
+      "method": ["Mix butter and sugar together.", "Add egg and flour and mix.", "Stir in chocolate chips.", "Roll into balls and place on a tray.", "Bake in oven until cooked."]
+    }
+  ]
+}
